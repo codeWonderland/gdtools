@@ -1,0 +1,16 @@
+[gd_scene load_steps=3 format=3 uid="uid://enemy"]
+
+[ext_resource type="Script" path="res://scenes/enemy.gd" id="1_abc"]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_1"]
+radius = 8.0
+
+[node name="Enemy" type="CharacterBody2D" groups=["enemies", "damageable"]]
+script = ExtResource("1_abc")
+speed = 120.0
+
+[node name="Sprite" type="Sprite2D" parent="."]
+unique_name_in_owner = true
+
+[node name="Hitbox" type="CollisionShape2D" parent="."]
+shape = SubResource("CircleShape2D_1")
